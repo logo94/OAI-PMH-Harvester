@@ -1,5 +1,5 @@
 # OAI-PMH Harvester
-Script python per l'export nel formato CSV dei metadati descrittivi esposti tramite protocollo OAI-PMH. I metadati vengono estratti e salvati secondo lo standard Dublin Core. 
+Script python per l'export dei metadati descrittivi esposti tramite protocollo OAI-PMH. I metadati vengono estratti e salvati all'interno di un file CSV secondo lo standard Dublin Core. 
 
 
 ## Installazione ##
@@ -42,6 +42,6 @@ python oaiClient.py
 ```
 Verrà quindi chiesto di inserire, a riga di comando, l'URL da cui effettuare l'estrazione.
 
-Una volta lanciato lo script comincerà a scrivere all'interno di una file CSV, denominato con la data corrente, i metadati esposti.
+Una volta lanciato lo script comincerà a scrivere all'interno di un file CSV, denominato con la data corrente, i metadati esposti.
 
 Ad ogni colonna è assegnato un campo Dublin Core, per il campo `\\dc:subjects` viene creata una colonna aggiuntiva, alla fine, per ogni valore
