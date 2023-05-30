@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ## Utilizzo ##
 Una volta scaricato il repository e scaricate le librerie necessarie, per avviare lo script sarà sufficiente eseguire il comando:
 ```
-python oaiClient.py
+python oai-client.py
 ```
 Verrà quindi chiesto di inserire, a riga di comando, l'URL da cui effettuare l'estrazione.
 
