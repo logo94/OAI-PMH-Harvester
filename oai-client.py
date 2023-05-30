@@ -131,7 +131,7 @@ with open(date.today().strftime("%d_%m_%y") + '.csv', 'w+', encoding='utf8') as 
         # DC:DESCRIPTION
         if len(dc_descriptions) > 0:
             description = element['description'][0]
-        row.append(description.replace('\n', ' ').replace('\t', ' '))
+        row.append(description.strip().replace('\n', ' ').replace('\t', ' '))
 
         # DC:SUBJECT       
         sublist = len(dc_subjects)
