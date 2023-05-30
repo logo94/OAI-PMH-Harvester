@@ -18,7 +18,7 @@ def oaiReq(url):
 with open(date.today().strftime("%d_%m_%y") + '.csv', 'w+', encoding='utf8') as csv_file:
 
     thewriter = writer(csv_file)
-    headerow = ['Identifier', 'Title', 'Creator', 'Publisher', 'Date', 'Type', 'Format', 'DOI', 'Source', 'Language', 'Relation', 'Coverage', 'Rights', 'Description', 'Subjects']
+    headerow = ['Identifier', 'Title', 'Creator', 'Publisher', 'Contributor', 'Date', 'Type', 'Format', 'DOI', 'Source', 'Language', 'Relation', 'Coverage', 'Rights', 'Description', 'Subjects']
     thewriter.writerow(headerow)
 
     for record in oaiReq(url):
@@ -52,9 +52,9 @@ with open(date.today().strftime("%d_%m_%y") + '.csv', 'w+', encoding='utf8') as 
 
         # DC:TITLE
         if len(dc_title) > 0:
-            title = element['title'][0].strip().replace(u'\n', u' ').replace(u'\t', u' ')
+            title = element['title'][0]
         else: title = ""
-        row.append(title)
+        row.append(title.strip().replace(u'\n', u' ').replace(u'\t', u' '))
 
         # DC:CREATOR
         if len(dc_creator) > 0:
@@ -130,8 +130,8 @@ with open(date.today().strftime("%d_%m_%y") + '.csv', 'w+', encoding='utf8') as 
 
         # DC:DESCRIPTION
         if len(dc_descriptions) > 0:
-            description = element['description'][0].replace(u'\n', u' ').replace(u'\t', u' ')
-        row.append(description)
+            description = element['description'][0]
+        row.append(description.replace('\n', ' ').replace('\t', ' '))
 
         # DC:SUBJECT       
         sublist = len(dc_subjects)
