@@ -22,8 +22,7 @@ with open(date.today().strftime("%d_%m_%y") + '.csv', 'w+', encoding='utf8') as 
     thewriter.writerow(headerow)
 
     for record in oaiReq(url):
-
-        #provare array push
+        
         row = []
         element = record[1].getMap()
 
