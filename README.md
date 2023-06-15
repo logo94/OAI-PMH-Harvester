@@ -47,4 +47,4 @@ Una volta lanciato lo script comincerà a scrivere all'interno di un file CSV, d
 Ad ogni colonna è assegnato un campo Dublin Core, per il campo `\\dc:subjects` viene creata una colonna aggiuntiva, alla fine, per ogni valore
 
 ## Crediti
-Lo script è stato sviluppato nell'ambito di un progetto interno dell'USI - Università della Svizzera Italiana ed è rilasciato con licenza aperta (MIT licence)
+Lo script è stato sviluppato nell'ambito di un progetto interno dell'USI - Università della Svizzera Italiana ed è rilasciato tramite licenza aperta (MIT licence)
